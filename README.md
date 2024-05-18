@@ -1,2 +1,2 @@
 # SeedDocs
-The web documentation of Seed.
+This repository contains the source code of the web documentation of Seed.

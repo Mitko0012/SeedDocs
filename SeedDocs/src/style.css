@@ -1,0 +1,75 @@
+body {
+    margin: 0px;
+    background-color: rgb(158, 88, 172);
+    font-family: Lexend;
+    overflow-x: hidden;
+}
+
+.textAnchor {
+    color: rgb(94, 255, 0);
+    text-decoration: none;
+}
+
+.textAnchor:hover {
+    color: rgb(67, 182, 0);
+    cursor: pointer;
+}
+
+.menuElement {
+    border: 2px solid rgb(165, 130, 85);
+    background-color: rgb(255, 219, 178);
+    margin: 5px;
+}
+
+.menuElement:hover {
+    background-color: rgb(255, 231, 203);
+    cursor: pointer;
+}
+
+
+#headCenter {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    background-color: rgb(252, 210, 161);
+    width: 100vw;
+}
+
+#logo {
+    margin: 20px;
+    height: 200px;
+}
+
+
+#menu {
+    width: 150px;
+    padding: 2px;
+    border: 2.5px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    background-color: rgb(255, 201, 140);
+}
+
+#toggleButt {
+    position: relative;
+    font-family: Lexend;
+    font-size: 1.5em;
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#menuContainer {
+    float: left;
+    margin-right: 20px;
+}
+
+#pageContent {
+    margin-left: 13%;
+    font-size: 1.8em;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    height: fit-content;
+    overflow-wrap: break-word;
+}

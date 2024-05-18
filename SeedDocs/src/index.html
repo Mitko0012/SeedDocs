@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>Seed</title>
+        <link rel="icon" href="Images/Logo.png">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="headCenter">
+                <img src="Images/Logo.png" id="logo">
+            </div>
+        </header>
+        <div id="menuContainer">    
+            <div id="menu">
+                <div class="menuElement">Introduction</div>
+                <div class="menuElement">GameLogic</div>
+                <div class="menuElement">foo</div>
+                <div class="menuElement">foo</div>
+                <div class="menuElement">foo</div>
+                <div class="menuElement">foo</div>
+            </div>
+            <input id="toggleButt" type="button" value="Hide">
+        </div>
+        <div id="pageContentContainer">            
+            <div id="pageContent">
+                <h1>Introduction</h1>
+                <hr>
+                <p>This is the documentation of Seed, a 2D game engine for creating Windows and Linux games built in C#.</p>
+                <h3>Installation</h3>
+                <p>Seed can be installed these ways:</p>
+                <ul>
+                    <li>Windows:</li>
+                    <ul>
+                        <li>Clone the source code from <a class="textAnchor" href="https://github.com/Mitko0012/Seed" target="_blank">GitHub</a>.</li>
+                        <li>Download the release from GitHub.</li>
+                        <li>Get the SeedLib package from NuGet.</li>
+                    </ul>
+                </ul>
+                <h3>Dependencies</h3>
+                <ul>
+                    <li>Windows</li>
+                    <ul>
+                        <li>Target framework: net8.0-windows</li>
+                        <li>NAudio 2.2.1</li>
+                    </ul>
+                </ul>
+                <br>
+                <p>After installing, create a new C# project targeting the target framework for the platform you're using and add a reference to Seed.</p>
+                <p>If you cloned the source code or downloaded the release from GitHub, then NAudio is already installed. If you got the SeedLib package, then get the NAudio package from NuGet and add it to your project.</p>                
+            </div>
+        </div>   
+    </body>
+</html>

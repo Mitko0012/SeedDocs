@@ -5,6 +5,26 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: rgb(21, 255, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(15, 175, 0);
+}
+
+code {
+    background-color: white;
+    color: black;
+    padding: 3px;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+li {
+    margin-bottom: 20px;
+}
 
 #headCenter {
     position: relative;
@@ -23,19 +43,19 @@ body {
 
 #menu {
     width: 150px;
-    padding: 2px;
     border: 2.5px solid rgb(0, 0, 0);
     border-radius: 3px;
     background-color: rgb(255, 201, 140);
 }
 
 .menuElement {
-    border: 2px solid rgb(165, 130, 85);
+    border: 5px solid rgb(180, 143, 95);
     background-color: rgb(255, 219, 178);
-    margin: 5px;
+    padding: 3px;
+    margin: 7px;
 }
 
-#menuElement:hover {
+.menuElement:hover {
     background-color: rgb(255, 231, 203);
     cursor: pointer;
 }

@@ -49,10 +49,12 @@ li {
 }
 
 .menuElement {
-    border: 5px solid rgb(180, 143, 95);
+    border: 3px solid rgb(180, 143, 95);
+    border-radius: 2px;
     background-color: rgb(255, 219, 178);
     padding: 3px;
     margin: 7px;
+    overflow-wrap: break-word;
 }
 
 .menuElement:hover {

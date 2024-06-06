@@ -25,7 +25,7 @@ const pages = [`<h1>Introduction</h1>
 `<h1><code>public abstract class GameLogic</code></h1>
 <hr> 
 <p>The main class of Seed. All Seed scripts derive from it.</p>
-<h3>Constructors:</h3>
+<h3>Constructors</h3>
 <hr>
 <code>public GameLogic()</code>
 <p>Creates a new instance of the GameLogic class. Since the class is abstract, a new instance cannot be created directly.</p>
@@ -386,4 +386,84 @@ const pages = [`<h1>Introduction</h1>
 <hr>
 <code>public override void Draw()</code>
 <p>Draws the text on the screen.</p>
-<br>`];
+<br>`,
+`<h1><code>public class Collider</code></h1>
+                <hr>
+                <p>Box colliders that can be attached to elements. This class also has static methods to check if colliders are colliding</p>
+                <h3>Constructors</h3>
+                <hr>
+                <code>public Collider(double relativeXStart, double relativeXEnd, double relativeYStart, double relativeYEnd, Element element)</code>
+                <p>Creates a new collider.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>relativeXStart</code>: Value to be set as <code>RelativeXStart</code></li>
+                    <li><code>relativeXEnd</code>: Value to be set as <code>RelativeXEnd</code></li>
+                    <li><code>relativeYStart</code>: Value to be set as <code>RelativeYStart</code></li>
+                    <li><code>relativeYEnd</code>: Value to be set as <code>RelativeYEnd</code></li>
+                    <li><code>element</code>: Value to be set as <code>ParentElement</code></li>
+                </ul>
+                <br>
+                <h3>Properties</h3>
+                <hr>
+                <code>public double RelativeXStart{get; set;}</code>
+                <p>Gets or sets the start of the collider on the X axis in game units relative to the parent element's X position.</p>
+                <br>
+                <code>public double RelativeXEnd{get; set;}</code>
+                <p>Gets or sets the end of the collider on the X axis in game units relative to the parent element's X position.</p>
+                <br>
+                <code>public double RelativeYStart{get;}</code>
+                <p>Gets the start of the collider on the Y axis in game units relative to the parent element's Y position.</p>
+                <br>
+                <code>public double RelativeYEnd{get; set;}</code>
+                <p>Gets or sets the end of the collider on the Y axis in game units relative to the parent element's Y position.</p>
+                <br>
+                <code>public Element ParentElement{get; set;}</code>
+                <p>Gets or sets the parent element of the collider.</p>
+                <br>
+                <h3>Methods</h3>
+                <code>static public bool IsColliding(CollidableElement element, CollidableElement element2)</code>
+                <p>Checks if two collidable elements are colliding.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>element</code>: The first element.</li>
+                    <li><code>element2</code>: The second element.</li>
+                </ul>
+                <p>Returns: <code>true</code> if the elements are colliding, <code>false</code> if not.</p>
+                <br>
+                <code>static public bool IsColliding(CollidableElement element, Collider collider)</code>
+                <p>Checks if a collidable element is colliding with a collider.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>element</code>: The collidable element.</li>
+                    <li><code>collider</code>: The collider.</li>
+                </ul>
+                <p>Returns: <code>true</code> if the element and the collider are colliding, <code>false</code> if not.</p>
+                <br>
+                <code>static public bool IsColliding(Collider collider, Collider collider2)</code>
+                <p>Checks if two colliders are colliding.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>collider</code>: The first collider.</li>
+                    <li><code>collider2</code>: The second collider.</li>
+                </ul>
+                <p>Returns: <code>true</code> if the colliders are colliding, <code>false</code> if not.</p>
+                <br>
+                <code>static public bool IsPointInside(CollidableElement element, double pointX, double pointY)</code>
+                <p>Checks if a point is inside a collidable element.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>element</code>: The element.</li>
+                    <li><code>pointX</code>: The X position of the point in game units</li>
+                    <li><code>pointY</code>: The Y position of the point in game units.</li>
+                </ul>
+                <p>Returns: <code>true</code> if the point is inside the element, <code>false</code> if not.</p>
+                <code>static public bool IsPointInside(Collider collider, double pointX, double pointY)</code>
+                <p>Checks if a point is inside a collider.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>collider</code>: The collider.</li>
+                    <li><code>pointX</code>: The X position of the point in game units</li>
+                    <li><code>pointY</code>: The Y position of the point in game units.</li>
+                </ul>
+                <p>Returns: <code>true</code> if the point is inside the collider, <code>false</code> if not.</p>
+                <br>`];

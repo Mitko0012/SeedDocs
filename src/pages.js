@@ -145,7 +145,7 @@ const pages = [`<h1>Introduction</h1>
 <p>The Y position of the element in game units.</p>
 <br>
 <code>public bool IsSticky</code>
-<p>True if the element should be sticky(independent on the camera positionm), false if not.</p>
+<p>True if the element should be sticky(independent from the camera positionm), false if not.</p>
 <br>
 <h3>Methods</h3>
 <hr>
@@ -466,4 +466,14 @@ const pages = [`<h1>Introduction</h1>
                     <li><code>pointY</code>: The Y position of the point in game units.</li>
                 </ul>
                 <p>Returns: <code>true</code> if the point is inside the collider, <code>false</code> if not.</p>
+                <br>`,
+`<h1><code>public static class Camera</code></h1>
+                <p>The game camera.</p>
+                <h3>Fields</h3>
+                <hr>
+                <code>public static double PosX</code>
+                <p>The X position of the camera in game units.</p>
+                <br>
+                <code>public static double PosY</code>
+                <p>The Y position of the camera in game units.</p>
                 <br>`];

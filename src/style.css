@@ -36,13 +36,14 @@ li {
 }
 
 #logo {
-    margin: 20px;
-    height: 200px;
+    margin: 10px;
+    height: 150px;
 }
 
 
 #menu {
-    width: 150px;
+    width: fit-content;
+    margin-right: 30px;
     border: 2.5px solid rgb(0, 0, 0);
     border-radius: 3px;
     background-color: rgb(255, 201, 140);

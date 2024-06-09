@@ -134,8 +134,8 @@ const pages = [`<h1>Introduction</h1>
 <p>Exits the game.</p>
 <br> `,
 `<h1><code>public abstract class Element</code></h1>
+<hr>
 <p>The class from which each game element class derives. A game element is an object that gets displayed on the screen. It has features such as collision checking.</p>
-<br>
 <h3>Fields</h3>
 <hr>
 <code>public double PosX</code>
@@ -468,7 +468,8 @@ const pages = [`<h1>Introduction</h1>
                 <p>Returns: <code>true</code> if the point is inside the collider, <code>false</code> if not.</p>
                 <br>`,
 `<h1><code>public static class Camera</code></h1>
-                <p>The game camera.</p>
+<hr>                
+<p>The game camera.</p>
                 <h3>Fields</h3>
                 <hr>
                 <code>public static double PosX</code>
@@ -476,4 +477,92 @@ const pages = [`<h1>Introduction</h1>
                 <br>
                 <code>public static double PosY</code>
                 <p>The Y position of the camera in game units.</p>
+                <br>`,
+`<h1><code>public class Tilemap : Element</code></h1>
+                <hr>
+                <p>Represents a tile map element.</p>
+                <h3>Constructors</h3>
+                <hr>
+                <code>public Tilemap()</code>
+                <p>Creates an instance of the tilemap class.</p>
+                <br>
+                <h3>Fields</h3>
+                <hr>
+                <code>public List&lt;List&lt;int&gt;&gt; Map</code>
+                <p>Represents the tile map where each value corresponds to an index of an item in <code>GameLogic.TileTextures</code>.</p>
+                <br>
+                <h3>Methods</h3>
+                <hr>
+                <code>public override void Draw()</code>
+                <p>Draws the tile map on the screen.</p>
+                <br>`,
+`<h1><code>public static class Mouse</code></h1>
+                <hr>
+                <p>A class that represents mouse input.</p>
+                <h3>Properties</h3>
+                <hr>
+                <code>public static double PosX {get;}</code>
+                <p>Gets the X position of the mouse in game units.</p>
+                <br>
+                <code>public static double PosY {get;}</code>
+                <p>Gets the Y position of the mouse in game units.</p>
+                <br>
+                <code>public static bool LeftDown {get;}</code>
+                <p>Gets whether the left mouse button is down.</p>
+                <br>
+                <code>public static bool MiddleDown {get;}</code>
+                <p>Gets whether the middle mouse button is down.</p>
+                <br>
+                <code>public static bool RightDown {get;}</code>
+                <p>Gets whether the right mouse button is down.</p>
+                <br>
+                <h3>Methods</h3>
+                <code>public static void GetMousePos(object? sender, MouseEventArgs e)</code>
+                <p>The event handler for when the mouse is moved. This method shouldn't be called directly</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>sender</code>: The object that raises the event.</li>
+                    <li><code>e</code>: The event arguments.</li>
+                </ul>
+                <br>
+                <code>public static void OnMouseDown(object? sender, MouseEventArgs e)</code>
+                <p>The event handler for when a mouse button is clicked. This method shouldn't be called directly</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>sender</code>: The object that raises the event.</li>
+                    <li><code>e</code>: The event arguments.</li>
+                </ul>
+                <br>
+                <code>public static void OnMouseUp(object? sender, MouseEventArgs e)</code>
+                <p>The event handler for when a mouse button is released. This method shouldn't be called directly</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>sender</code>: The object that raises the event.</li>
+                    <li><code>e</code>: The event arguments.</li>
+                </ul>
+                <br>`,
+`<h1><code>public static class KeyHandler</code></h1>
+                <hr>
+                <p>A class that represents keyboard input.</p>
+                <h3>Properties</h3>
+                <code>public static Dictionary&lt;string, bool&gt; KeysDown {get};</code>
+                <p>Gets a hash map that contains all the keys and whether each one of them is pressed or not.</p>
+                <br>
+                <h3>Methods</h3>
+                <hr>
+                <code>public static void KeyDown(object? sender, KeyEventArgs e)</code>
+                <p>The event handler for when a key is pressed. This method shouldn't be called directly</p>
+                <p>ParametersL</p>
+                <ul>
+                    <li><code>sender</code>: The object that raises the event.</li>
+                    <li><code>e</code>: The event arguments.</li>
+                </ul>
+                <br>
+                <code>public static void KeyUp(object? sender, KeyEventArgs e)</code>
+                <p>The event handler for when a key is released. This method shouldn't be called directly</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>sender</code>: The object that raises the event.</li>
+                    <li><code>e</code>: The event arguments.</li>
+                </ul>
                 <br>`];

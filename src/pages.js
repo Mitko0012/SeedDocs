@@ -565,4 +565,41 @@ const pages = [`<h1>Introduction</h1>
                     <li><code>sender</code>: The object that raises the event.</li>
                     <li><code>e</code>: The event arguments.</li>
                 </ul>
+                <br>`,
+`<h1><code>public class STexture</code></h1>
+                <hr>
+                <p>Class that represents a texture.</p>
+                <h3>Constructors</h3>
+                <hr>
+                <code>public STexture(string texturePath, STextureOrigin origin)</code>
+                <p>Creates an instance of the STexture class.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>texturePath</code>: The file path to the image or the name of the embedded resource.</li>
+                    <li><code>origin</code>: The origin of the image.</li>
+                </ul>
+                <br>
+                <code>public STexture(int width, int height)</code>
+                <p>Creates an instance of the STexture class with an empty image.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>width</code>: The width of the image.</li>
+                    <li><code>height</code>: The height of the image.</li>
+                </ul>
+                <br>
+                <h3>Properties</h3>
+                <hr>
+                <code>public Image Image {get;}</code>
+                <p>Gets the source image of the texture.</p>
+                <br>`,
+`<h1><code>public enum STextureOrigin</code></h1>
+                <hr>
+                <p>Represents the origin of an STexture.</p>
+                <h3>Fields</h3>
+                <hr>
+                <code>FilePath</code>
+                <p>Represents an image loaded from a file.</p>
+                <br>
+                <code>EmbeddedImage</code>
+                <p>Represents an image loaded as an embedded resource.</p>
                 <br>`];

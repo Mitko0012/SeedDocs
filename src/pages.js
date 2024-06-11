@@ -602,4 +602,211 @@ const pages = [`<h1>Introduction</h1>
                 <br>
                 <code>EmbeddedImage</code>
                 <p>Represents an image loaded as an embedded resource.</p>
-                <br>`];
+                <br>`,
+`<h1><code>public class Animation</code></h1>
+<hr>
+<p>Simple animations for sprites.</p>
+<h3>Constructors</h3>
+<hr>
+<code>public Animation(Sprite sprite, int waitTime, bool isLooping, params STexture[] frames)</code>
+<p>Creates a new animation.</p>
+<p>Parameters:</p>
+<ul>
+    <li><code>sprite</code>: The sprite the animation is gonna play on.</li>
+    <li><code>waitTime</code>: The time each animation frame is shown. If certain frames should be shown longer, an item of the <code>WaitTimes</code> array can be changed.</li>
+    <li><code>isLooping</code>: Whether the animation should loop after it finishes playing.</li>
+    <li><code>frames</code>: The frames of the animation.</li>
+</ul>
+<br>
+<h3>Properties</h3>
+<hr>
+<code>public int[] WaitTimes {get; set;}</code>
+<p>Gets or sets an array that represents the time each animation frame is shown.</p>
+<br>
+<code>public bool IsRunning {get;}</code>
+<p>Gets whether the animation is running.</p>
+<br>
+<code>public bool Looping {get; set;}</code>
+<p>Gets or sets whether the animation should loop after it ends.</p>
+<br>
+<h3>Methods</h3>
+<hr>
+<code>public void StartAnimation()</code>
+<p>Starts the animation.</p>
+<br>
+<code>public void StopAnimation()</code>
+<p>Stops the animation.</p>
+<br>`,
+`<h1><code>public class Sound</code></h1>
+<hr>
+<p>A class that represents a sound.</p>
+<h3>Constructors</h3>
+<hr>
+<code>public Sound(string path, float volume, bool looping)</code>
+<p>Creates an object of the Sound class.</p>
+<p>Parameters:</p>
+<ul>
+    <li><code>path</code>: The filepath of the sound file.</li>
+    <li><code>volume</code>: The volume of the sound. A float between 0 and 1.</li>
+    <li><code>looping</code>: True if the sound should loop, otherwise false.</li>
+</ul>
+<br>
+<h3>Properties</h3>
+<hr>
+<code>public bool IsPlaying {get;}</code>
+<p>Gets whether the sound is currently playing.</p>
+<br>
+<code>public bool Looping {get; set;}</code>
+<p>Gets or sets if the sound should loop after it ends playing.</p>
+<br>
+<code>public float Volume {get;}</code>
+<p>Gets the volume of the sound.</p>
+<br>
+<h3>Methods</h3>
+<hr>
+<code>public void Play()</code>
+<p>Plays the sound.</p>
+<br>
+<code>public void Stop()</code>
+<p>Stops the sound.</p>
+<br>
+<code>public void ChangeVolume(float vol)</code>
+<p>Changes the volume of the sound.</p>
+<p>Parameters:</p>
+<ul>
+    <li><code>vol</code>: Value to be set as the volume.</li>
+</ul>`,
+`<h1><code>public static class EmbdeddedResourceLoader</code></h1>
+<hr>
+<p>This class contains methods for loading embedded resources.</p>
+<br>
+<h3>Fields</h3>
+<hr>
+<code>public static Assembly? CurrAssembly</code>
+<p>Represents the current assembly of the program. Has to be initialized before resources could be loaded.</p>
+<br>
+<h3>Methods</h3>
+<code>public static Bitmap LoadImg(string name)</code>
+<p>Loads an embedded image resource.</p>
+<p>Properties:</p>
+<ul>
+    <li><code>name</code>: The name of the resource</li>
+</ul>
+<p>Returns: The resource represented as a <code>Bitmap</code> object.</p>
+<p>Exceptions:</p>
+<ul>
+    <li><code>Exception</code>: Thrown if the resource can't found.</li>
+</ul>
+<br>
+<code>public static string LoadTextFile(string name)</code>
+<p>Loads an embedded text file resource.</p>
+<p>Properties:</p>
+<ul>
+    <li><code>name</code>: The name of the resource</li>
+</ul>
+<p>Returns: The resource's contents.</p>
+<p>Exceptions:</p>
+<ul>
+    <li><code>Exception</code>: Thrown if the resource can't found.</li>
+</ul>
+<br>`,
+`<h1><code>public static class ObjectSerialization</code></h1>
+<hr>
+<h3>Methods</h3>
+<hr>
+<code>public static void SerializeJsonToFile&lt;T&gt;(T ob, string filePath)</code>
+<p>Serializes an object in JSON and saves it in a file.</p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>ob</code>: The object to be serialized.</li>
+    <li><code>filePath</code>: The path where the file will be saved.</li>
+</ul>
+<br>
+<code>public static string SerializeJson&lt;T&gt;(T ob)</code>
+<p>Serializes an object to JSON.</p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>ob</code>: The object to be seiralized.</li>
+</ul>
+<p>Returns: The JSON serialization of the object.</p>
+<br>
+<code>public static T? DeserializeJsonFromFile&lt;T&gt;(string filePath)</code>
+<p></p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>filePath</code>: The JSON source file.</li>
+</ul>
+<p>Returns: A deserialized object from the JSON source.</p>
+<br>
+<code>public static T? DeserializeJson&lt;T&gt;(string json)</code>
+<p>Deserializes an object from JSON.</p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>json</code>: The JSON to be deserialized.</li>
+</ul>
+<p>Returns: A deserialized object from the JSON source.</p>
+<br>
+<code>public static void SerializeXmlToFile&lt;T&gt;(T ob, string filePath)</code>
+<p></p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>ob</code>: The object to be serialized.</li>
+    <li><code>filePath</code>: The path where the file will be saved.</li>
+</ul>
+<br>
+<code>public static string SerializeXml&lt;T&gt;(T ob)</code>
+<p>Serializes an object to XML.</p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>ob</code>: The object to be serialized.</li>
+</ul>
+<p>Returns: The XML serialization of the object.</p>
+<br>
+<code>public static T? DeserializeXmlFromFile&lt;T&gt;(string filePath)</code>
+<p></p>
+<p>Type parameters:</p>
+<ul>
+    <li><code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>filePath</code>: The path to the XML source file.</li>
+</ul>
+<p>Returns: A deserialized object from the XML source.</p>
+<br>
+<code>public static T? DeserializeXml&lt;T&gt;(string xml)</code>
+<p>Deserializes an object from XML.</p>
+<p>Type parameters:</p>
+<ul>
+    <li>T<code>T</code>: The type of the object.</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+    <li><code>xml</code>: The XML to be deserialized.</li>
+</ul>
+<p>Returns: A deserialized object from the XML source.</p>
+<br>`];

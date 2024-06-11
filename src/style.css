@@ -44,18 +44,21 @@ li {
 #menu {
     width: fit-content;
     margin-right: 30px;
-    border: 2.5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 3px;
     background-color: rgb(255, 201, 140);
 }
 
 .menuElement {
-    border: 3px solid rgb(180, 143, 95);
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 2px;
     background-color: rgb(255, 219, 178);
     padding: 3px;
-    margin: 7px;
+    margin: 10px;
     overflow-wrap: break-word;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .menuElement:hover {

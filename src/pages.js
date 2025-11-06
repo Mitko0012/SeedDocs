@@ -460,7 +460,7 @@ const pages = [`<h1>Introduction</h1>
 <code>public double RelativeXEnd{get; set;}</code>
 <p>Gets or sets the end of the collider on the X axis in game units relative to the parent element's X position.</p>
 <br>
-<code>public double RelativeYStart{get;}</code>
+<code>public double RelativeYStart{get; set;}</code>
 <p>Gets the start of the collider on the Y axis in game units relative to the parent element's Y position.</p>
 <br>
 <code>public double RelativeYEnd{get; set;}</code>
@@ -729,7 +729,7 @@ const pages = [`<h1>Introduction</h1>
 <code>public void StopAnimation()</code>
 <p>Stops the animation.</p>
 <br>`,
-`<h1><code>public class Sound</code></h1>
+`<h1><code>public class Sound : IDisposable</code></h1>
 <hr>
 <p>A class that represents a sound.</p>
 <h3>Constructors</h3>
@@ -754,8 +754,8 @@ const pages = [`<h1>Introduction</h1>
 <code>public bool Looping {get; set;}</code>
 <p>Gets or sets if the sound should loop after it ends playing.</p>
 <br>
-<code>public float Volume {get;}</code>
-<p>Gets the volume of the sound.</p>
+<code>public float Volume {get; set;}</code>
+<p>Gets or sets the volume of the sound.</p>
 <br>
 <h3>Methods</h3>
 <hr>
@@ -765,11 +765,8 @@ const pages = [`<h1>Introduction</h1>
 <code>public void Stop()</code>
 <p>Stops the sound.</p>
 <br>
-<code>public void Pause()</code>
-<p>Pauses the sound.</p>
-<br>
-<code>public void Resume()</code>
-<p>Resumes the paused sound.</p>
+<code>public void Dispose()</code>
+<p>Disposes the resources used by the sound.</p>
 <br>
 <code>public void SetVolume(float vol)</code>
 <p>Sets the volume of the sound.</p>

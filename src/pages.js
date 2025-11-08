@@ -767,13 +767,7 @@ const pages = [`<h1>Introduction</h1>
 <br>
 <code>public void Dispose()</code>
 <p>Disposes the resources used by the sound.</p>
-<br>
-<code>public void SetVolume(float vol)</code>
-<p>Sets the volume of the sound.</p>
-<p>Parameters:</p>
-<ul>
-    <li><code>vol</code>: Value to be set as the volume.</li>
-</ul>`,
+<br>`,
 `<h1><code>public static class EmbdeddedResourceLoader</code></h1>
 <hr>
 <p>This class contains methods for loading embedded resources.</p>
